@@ -10,6 +10,8 @@ You can use the next GNU/Linux commands inside the repository folder:
 
     # Search and replace mymodule by your module name.
     find . -not -path '*/\.*' -type f -exec sed -i 's/mymodule/yourmodule/g' {} +
+    # Sometimes is written in upper case (mainly in docs).
+    find . -not -path '*/\.*' -type f -exec sed -i 's/MyModule/YourModule/g' {} +
     # Search and replace python_module by your repository name.
     find . -not -path '*/\.*' -type f -exec sed -i 's/python_module/yourmodule/g' {} +
     # Rename the module folder
