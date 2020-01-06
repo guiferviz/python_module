@@ -5,6 +5,16 @@ MyModule
 Sample Python module.
 Just clone this repository and change all `mymodule` to your module name. Also search for `python_module` because it's used in some URLs that point to the repository.
 
+Suppose you want to create a new Python library called `yourmodule`.
+You can use the next GNU/Linux commands inside the repository folder:
+
+    # Search and replace mymodule by your module name.
+    find . -not -path '*/\.*' -type f -exec sed -i 's/mymodule/yourmodule/g' {} +
+    # Search and replace python_module by your repository name.
+    find . -not -path '*/\.*' -type f -exec sed -i 's/python_module/yourmodule/g' {} +
+    # Rename the module folder
+    mv mymodule yourmodule
+
 
 Getting started
 ---------------
